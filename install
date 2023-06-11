@@ -1,0 +1,4 @@
+pkg update && pkg upgrade
+pkg install git
+pip install requests
+pip install phonenumbers
