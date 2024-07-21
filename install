@@ -1,4 +1,37 @@
-pkg update && pkg upgrade
-pkg install git
-pip install requests
-pip install phonenumbers
+red="\033[1;31m"
+green="\033[1;32m"
+echo -e $red"""
+# #    #  ####  #####   ##   #      #
+# ##   # #        #    #  #  #      #
+# # #  #  ####    #   #    # #      #
+# #  # #      #   #   ###### #      #
+# #   ## #    #   #   #    # #      #
+# #    #  ####    #   #    # ###### ######
+"""
+echo -e $green"""
+-a - install linux
+-t - install termux
+"""
+function linux(){
+        apt update
+        apt upgrade
+        apt install git
+        pip install requests
+        pip install phonenumbers
+}
+function termux(){
+        pkg update
+        pkg upgrde
+        pkg install git
+        pip install requests
+        pip install phonenumbers
+}
+getopts at option
+
+if [ "$option" == "a" ];then
+        linux
+elif [ "$option" == "t" ];then
+        termux
+else
+        echo -e $red "error"
+fi
