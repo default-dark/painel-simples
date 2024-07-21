@@ -32,6 +32,4 @@ if [ "$option" == "a" ];then
         linux
 elif [ "$option" == "t" ];then
         termux
-else
-        echo -e $red "error"
 fi
