@@ -15,13 +15,15 @@ echo -e $green"""
 function linux(){
         apt update
         apt upgrade
+        apt install python
         apt install git
         pip install requests
         pip install phonenumbers
 }
 function termux(){
         pkg update
-        pkg upgrde
+        pkg upgrade
+        pkg install python
         pkg install git
         pip install requests
         pip install phonenumbers
